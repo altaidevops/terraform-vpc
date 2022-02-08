@@ -20,7 +20,7 @@ else {
 
 node('terraform'){
     stage("Pull Code"){
-        git 'https://github.com/ikambarov/terraform-vpc.git'
+        git 'https://github.com/altaidevops/terraform-vpc.git'
     }
 
     withCredentials([usernamePassword(credentialsId: 'aws-key', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
